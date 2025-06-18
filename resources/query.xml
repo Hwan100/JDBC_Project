@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="check">
+		SELECT *
+		FROM BAN
+		WHERE WORD_NAME = ?
+	</entry>
+	<entry key="insertWord">
+		INSERT INTO BAN
+		VALUES(?)
+	</entry>
+	<entry key="deleteWord">
+		DELETE 
+		FROM BAN 
+		WHERE WORD_NAME = ?
+	</entry>
+	<entry key="updateWord">
+		UPDATE BAN
+		SET WORD_NAME = ?
+		WHERE WORD_NAME = ?
+	</entry>
+	<entry key="selectList">
+		SELECT * 
+		FROM BAN
+		ORDER BY WORD_NAME
+	</entry>
+	<entry key="distinctCheck">
+		SELECT *
+		FROM WORD
+		WHERE WORD_NAME = ?
+	</entry>
+	<entry key="insertUseWord">
+		INSERT INTO WORD
+		VALUES(SEQ_WORD_NO.NEXTVAL,?,?)
+	</entry>
+	<entry key="selectUseWord">
+		SELECT WORD_NAME, WORD_DEFINITION
+		FROM WORD
+		WHERE WORD_NAME = ?
+	</entry>
+	<entry key="deleteTable">
+		DELETE FROM WORD
+	</entry>
+</properties>
